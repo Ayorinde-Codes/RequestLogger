@@ -1,9 +1,12 @@
 # Very short description of the package
 
-[![Latest Version](https://img.shields.io/github/stars/Ayorinde-Codes/RequestLogger.svg?style=flat-square)](https://github.com/Ayorinde-Codes/RequestLogger/releases)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/ayorinde-codes/requestlogger.svg?style=flat-square)](https://packagist.org/packages/ayorinde-codes/requestlogger)
+
 [![Stars](https://img.shields.io/github/stars/Ayorinde-Codes/RequestLogger.svg?style=flat-square)](https://github.com/Ayorinde-Codes/RequestLogger/stargazers)
 
-RequestLogger is a Laravel Package that makes it easy to that logs requests ip, agent, payload request, payload response, Time of execution and url in the database within any request call.
+
+
+RequestLogger is a Laravel Package that makes it easy to log requests ip, agent(browser or postman), payload request, payload response, Time of execution and url in the database within any request call.
 
 ## Requirements
 This package requires:
