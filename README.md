@@ -20,7 +20,10 @@ composer require ayorinde-codes/requestlogger
 Append the following line to the providers key in config/app.php to register the package:
 
 ```bash
+    'providers' => [
+
 Ayorindecodes\Requestlogger\RequestLoggerServiceProvider::class,
+    ]
 ```
 ## Usage
 ## Kernel 
