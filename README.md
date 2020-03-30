@@ -1,12 +1,14 @@
 # Very short description of the package
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/ayorinde-codes/requestlogger.svg?style=flat-square)](https://packagist.org/packages/ayorinde-codes/requestlogger)
-[![Build Status](https://img.shields.io/travis/ayorinde-codes/requestlogger/master.svg?style=flat-square)](https://travis-ci.org/ayorinde-codes/requestlogger)
-[![Quality Score](https://img.shields.io/scrutinizer/g/ayorinde-codes/requestlogger.svg?style=flat-square)](https://scrutinizer-ci.com/g/ayorinde-codes/requestlogger)
-[![Total Downloads](https://img.shields.io/packagist/dt/ayorinde-codes/requestlogger.svg?style=flat-square)](https://packagist.org/packages/ayorinde-codes/requestlogger)
+[![Latest Version](https://img.shields.io/github/stars/Ayorinde-Codes/RequestLogger.svg?style=flat-square)](https://github.com/Ayorinde-Codes/RequestLogger/releases)
+[![Stars](https://img.shields.io/github/stars/Ayorinde-Codes/RequestLogger.svg?style=flat-square)](https://github.com/Ayorinde-Codes/RequestLogger/stargazers)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+RequestLogger is a Laravel Package that makes it easy to that logs requests ip, agent, payload request, payload response, Time of execution and url in the database within any request call.
 
+## Requirements
+This package requires:
+
+PHP 7.1+
 ## Installation
 
 You can install the package via composer:
@@ -15,17 +17,40 @@ You can install the package via composer:
 composer require ayorinde-codes/requestlogger
 ```
 
-## Usage
+Append the following line to the providers key in config/app.php to register the package:
 
-``` php
-// Usage description here
+```bash
+Ayorindecodes\Requestlogger\RequestLoggerServiceProvider::class,
 ```
+## Usage
+## Kernel 
+
+Append the following to the Kernel App\Http\Kernel.php in the $routeMiddleware and $middlewareGroups add
+```bash
+    protected $middlewareGroups = [
+
+        'api' => [
+            'request_logger'
+        ]
+
+protected $routeMiddleware =[
+         'request_logger'=>Ayorindecodes\Requestlogger\Middleware\RequestLoggerMiddleware::class,
+]
+```
+
+run composer dump-autoload
+
 
 ### Testing
 
 ``` bash
 composer test
 ```
+
+## Publish Package Assets (optional)
+You may additionally publish the package configuration and language file using the vendor:publish Artisan command:
+
+php artisan vendor:publish --provider="Ayorindecodes\Requestlogger\RequestLoggerServiceProvider"
 
 ### Changelog
 
