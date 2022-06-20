@@ -1,4 +1,4 @@
-# Very short description of the package
+# Description of the package
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/ayorinde-codes/requestlogger.svg?style=flat-square)](https://packagist.org/packages/ayorinde-codes/requestlogger)
 
